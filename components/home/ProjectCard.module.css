@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  background: var(--navy);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 18px 40px rgba(45, 224, 138, 0.14);
+}
+
+.body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.body h3 {
+  font: 800 1.3rem var(--head);
+  margin: 0;
+}
+
+.body p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  margin: 0;
+  flex: 1;
+}
+
+.body a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.body a:hover {
+  text-decoration: underline;
+}

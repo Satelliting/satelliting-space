@@ -1,0 +1,14 @@
+.link {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.link:hover,
+.link[aria-current="page"] {
+  color: #fff;
+}
+
+.link[aria-current="page"] {
+  box-shadow: 0 2px 0 var(--green);
+}

@@ -1,0 +1,11 @@
+.default {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.no-top {
+  padding-block: 0 clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.none {
+  padding-block: 0;
+}

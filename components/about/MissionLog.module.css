@@ -1,0 +1,53 @@
+.log {
+  position: relative;
+  max-width: 46rem;
+  padding-left: 2.2rem;
+  margin: 0;
+  list-style: none;
+}
+
+.log::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  border-left: 2px dashed var(--line);
+}
+
+.entry {
+  position: relative;
+  margin-bottom: 2.2rem;
+}
+
+.entry::before {
+  content: "";
+  position: absolute;
+  left: -2.2rem;
+  top: 0.35rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--deep);
+  border: 3px solid var(--green);
+  box-shadow: 0 0 12px rgba(45, 224, 138, 0.6);
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry:last-child::before {
+  border-color: var(--sky);
+  box-shadow: 0 0 12px rgba(92, 200, 255, 0.6);
+}
+
+.entry h3 {
+  font: 800 1.3rem var(--head);
+  margin: 0 0 0.3rem;
+}
+
+.entry p {
+  color: var(--muted);
+  margin: 0;
+}

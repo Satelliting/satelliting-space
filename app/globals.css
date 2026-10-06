@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens ---------- */
+:root {
+  --deep: #04122b; /* page background */
+  --navy: #082049; /* raised surfaces */
+  --navy-2: #0d2d63;
+  --line: #1b3f7a;
+  --text: #eaf3ff;
+  --muted: #9db6dd;
+  --blue: #2f7bff; /* primary */
+  --sky: #5cc8ff;
+  --green: #2de08a; /* secondary / "go" */
+  --mint: #b9ffdc;
+  --radius: 20px;
+  --head: var(--font-bricolage), "Helvetica Neue", Arial, sans-serif;
+  --body: var(--font-dm-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--deep);
+  font: 400 1.0625rem/1.65 var(--body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+h2 {
+  font: 800 clamp(2rem, 4.2vw, 3rem) / 1.08 var(--head);
+  letter-spacing: -0.025em;
+  margin: 0 0 0.8rem;
+}
+
+/* Starfield + glow backdrop */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1.5px 1.5px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 120px, #bfe3ff, transparent),
+    radial-gradient(1.5px 1.5px at 160px 60px, #c9ffe4, transparent),
+    radial-gradient(1px 1px at 230px 170px, #fff, transparent),
+    radial-gradient(1px 1px at 300px 90px, #9fd0ff, transparent);
+  background-size: 340px 220px;
+  opacity: 0.55;
+  animation: twinkle 6s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(700px 500px at 85% 8%, rgba(47, 123, 255, 0.28), transparent 70%),
+    radial-gradient(600px 450px at 5% 55%, rgba(45, 224, 138, 0.14), transparent 70%);
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

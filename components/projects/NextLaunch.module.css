@@ -1,0 +1,43 @@
+.box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  border-radius: 28px;
+  border: 2px dashed var(--green);
+  background: rgba(45, 224, 138, 0.05);
+}
+
+.box h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 0.4rem;
+}
+
+.box p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+  margin-right: 0.6rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 900px) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+}

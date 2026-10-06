@@ -1,0 +1,154 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.field label,
+.field legend {
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+.field legend {
+  margin-bottom: 0.4rem;
+}
+
+.field small {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.field input:not([type="checkbox"]),
+.field select,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  background: rgba(4, 18, 43, 0.7);
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #6a84b3;
+}
+
+.field input:not([type="checkbox"]):hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: #2c5ca8;
+}
+
+.field input:not([type="checkbox"]):focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(45, 224, 138, 0.18);
+}
+
+.field select option {
+  background: var(--navy);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chips span {
+  position: relative;
+}
+
+.chips input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.chips label {
+  display: block;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--muted);
+  transition: all 0.15s ease;
+}
+
+.chips label:hover {
+  border-color: var(--sky);
+  color: var(--text);
+}
+
+.chips input:checked + label {
+  background: rgba(45, 224, 138, 0.14);
+  border-color: var(--green);
+  color: var(--mint);
+}
+
+.chips input:focus-visible + label {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+
+.send {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.send button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.status {
+  color: var(--mint);
+  font-size: 0.95rem;
+  margin: 0;
+  min-height: 1.4em;
+}
+
+@media (max-width: 560px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

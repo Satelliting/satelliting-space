@@ -1,0 +1,43 @@
+.box {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 30px;
+  padding: clamp(2.5rem, 7vw, 5rem) 1.5rem;
+  background: linear-gradient(135deg, #0a4fd6, #0f9d8a 70%, #1fd486);
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  border: 1.5px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 520px;
+  height: 520px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box::after {
+  width: 820px;
+  height: 820px;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.box > * {
+  position: relative;
+  z-index: 1;
+}
+
+.box h2 {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.box p {
+  max-width: 30rem;
+  margin: 0 auto 2rem;
+  color: #e1fff0;
+}

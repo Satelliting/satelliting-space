@@ -1,0 +1,49 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-block: 0.9rem;
+  background: rgba(4, 18, 43, 0.72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(27, 63, 122, 0.6);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font: 800 1.35rem var(--head);
+  text-decoration: none;
+}
+
+.brand img {
+  height: 34px;
+  width: auto;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 560px) {
+  .list {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .hideSm {
+    display: none;
+  }
+}

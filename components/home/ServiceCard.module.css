@@ -1,0 +1,39 @@
+.card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, var(--navy-2), var(--navy) 60%);
+}
+
+.green {
+  background: linear-gradient(160deg, #0b4a52, var(--navy) 60%);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.2rem;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sky .icon {
+  stroke: var(--sky);
+}
+
+.green .icon {
+  stroke: var(--green);
+}
+
+.card h3 {
+  font: 800 1.35rem var(--head);
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.98rem;
+}

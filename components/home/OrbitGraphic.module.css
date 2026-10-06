@@ -1,0 +1,91 @@
+.orbit {
+  position: relative;
+  aspect-ratio: 1;
+  width: min(100%, 500px);
+  margin-inline: auto;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px dashed rgba(92, 200, 255, 0.35);
+  border-radius: 50%;
+}
+
+.r2 {
+  inset: 15%;
+  border-color: rgba(45, 224, 138, 0.4);
+}
+
+.r3 {
+  inset: 30%;
+  border-style: solid;
+  border-color: rgba(92, 200, 255, 0.5);
+}
+
+.planet {
+  position: absolute;
+  inset: 41%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 28%, var(--mint), var(--green) 38%, var(--blue) 85%);
+  box-shadow:
+    0 0 70px rgba(45, 224, 138, 0.5),
+    0 0 140px rgba(47, 123, 255, 0.4);
+}
+
+.arm {
+  position: absolute;
+  inset: 0;
+  animation: spin 16s linear infinite;
+}
+
+.a2 {
+  inset: 15%;
+  animation-duration: 10s;
+  animation-direction: reverse;
+}
+
+.a3 {
+  inset: 30%;
+  animation-duration: 6.5s;
+}
+
+.sat {
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 22px var(--sky);
+}
+
+.a2 .sat {
+  background: var(--green);
+  box-shadow: 0 0 18px var(--green);
+  width: 14px;
+  height: 14px;
+  top: -7px;
+  left: calc(50% - 7px);
+}
+
+.a3 .sat {
+  background: var(--sky);
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  left: calc(50% - 5px);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .orbit {
+    width: min(100%, 360px);
+  }
+}

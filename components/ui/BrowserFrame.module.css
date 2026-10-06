@@ -1,0 +1,27 @@
+.bar {
+  display: flex;
+  gap: 6px;
+  padding: 0.6rem 0.9rem;
+  background: var(--navy-2);
+}
+
+.bar i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.bar i:first-child {
+  background: var(--green);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--line);
+}
+
+.image {
+  object-fit: cover;
+}

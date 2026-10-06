@@ -1,0 +1,49 @@
+.svg {
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.link {
+  stroke: var(--sky);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 0.7;
+  animation: draw 2.6s ease-out backwards;
+}
+
+.glow {
+  fill: var(--green);
+  opacity: 0.25;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.star {
+  fill: var(--mint);
+}
+
+.svg text {
+  fill: var(--text);
+  font: 700 15px var(--body);
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 900px) {
+  .svg {
+    max-width: 360px;
+  }
+}

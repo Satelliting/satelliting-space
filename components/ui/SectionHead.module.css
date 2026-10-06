@@ -1,0 +1,9 @@
+.head {
+  margin-bottom: 2.75rem;
+  max-width: 38rem;
+}
+
+.head p {
+  color: var(--muted);
+  margin: 0;
+}
